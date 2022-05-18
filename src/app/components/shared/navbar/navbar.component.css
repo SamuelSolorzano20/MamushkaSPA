@@ -1,0 +1,23 @@
+.nav-link {
+    font-family: var(--font-base);
+    font-weight: 500;
+    color: var(--primary-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+button {
+    background-color: var(--primary-color) !important;
+    border: none !important;
+}
+
+button:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+input[type="search"]:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: var(--primary-color) !important; 
+}

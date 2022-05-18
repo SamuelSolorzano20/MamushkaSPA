@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Special+Elite&display=swap');
+
+:root{
+    --font-base: "Rubik", sans-serif;
+
+    --primary-color: #E3879E;
+    --secondary-color: #FEC0CE;
+    --white-color: #F0F5F0;
+    --black-color: #030303;
+    --gray-color: #4b4c4f;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+

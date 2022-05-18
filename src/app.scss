@@ -1,0 +1,14 @@
+.app__title {
+    font-family: var(--font-base);
+    font-weight: bold;
+
+    span {
+        color: var(--primary-color);
+    }
+}
+
+.app__text {
+    font-family: var(--font-base);
+    color: var(--gray-color) !important;
+    text-align: justify;
+}
