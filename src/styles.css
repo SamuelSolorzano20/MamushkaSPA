@@ -8,6 +8,8 @@
     --white-color: #F0F5F0;
     --black-color: #030303;
     --gray-color: #4b4c4f;
+
+    --curve: 40;
 }
 
 * {

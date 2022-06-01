@@ -13,13 +13,15 @@ import {AngularFireModule} from "@angular/fire/compat"
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore"
 
 import { environment } from 'src/environments/environment';
+import { VestidosComponent } from './components/products/vestidos/vestidos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    LandingComponent
+    LandingComponent,
+    VestidosComponent
   ],
   imports: [
     BrowserModule,
