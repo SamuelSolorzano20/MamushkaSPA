@@ -1,15 +1,3 @@
-/* CARRUSEL */
-/* .carousel-item {
-    height: 655px !important;
-} 
-
-.carousel-item img {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  min-height: 655px !important;
-}   */
-
 h2 {
     font-size: 3rem;
 }
@@ -17,82 +5,6 @@ h2 {
 h2, p {
     color: var(--white-color);
     font-weight: bold;
-}
-
-/* OUR WORK */
-#cards_landscape_wrap-2{
-    text-align: center;
-    background: #F7F7F7;
-  }
-#cards_landscape_wrap-2 .container{
-  padding-top: 80px; 
-  padding-bottom: 100px;
-}
-#cards_landscape_wrap-2 a{
-  text-decoration: none;
-  outline: none;
-}
-#cards_landscape_wrap-2 .card-flyer {
-  border-radius: 5px;
-}
-#cards_landscape_wrap-2 .card-flyer .image-box{
-  background: #ffffff;
-  overflow: hidden;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
-  border-radius: 5px;
-}
-#cards_landscape_wrap-2 .card-flyer .image-box img{
-  -webkit-transition:all .9s ease; 
-  -moz-transition:all .9s ease; 
-  -o-transition:all .9s ease;
-  -ms-transition:all .9s ease; 
-  width: 100%;
-  height: 300px;
-}
-#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
-  opacity: 0.7;
-  -webkit-transform:scale(1.15);
-  -moz-transform:scale(1.15);
-  -ms-transform:scale(1.15);
-  -o-transform:scale(1.15);
-  transform:scale(1.15);
-}
-#cards_landscape_wrap-2 .card-flyer .text-box{
-  text-align: center;
-}
-#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
-  padding: 30px 18px;
-}
-#cards_landscape_wrap-2 .card-flyer{
-  background: #FFFFFF;
-  margin-top: 50px;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
-}
-#cards_landscape_wrap-2 .card-flyer:hover{
-  background: #fff;
-  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  margin-top: 50px;
-}
-
-#cards_landscape_wrap-2 .card-flyer .text-box h6{
-  margin-top: 0px;
-  margin-bottom: 4px; 
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: 'Roboto Black', sans-serif;
-  letter-spacing: 1px;
-  color: var(--primary-color);
 }
 
 .btn-primary {
@@ -105,12 +17,119 @@ h2, p {
   background-color: var(--secondary-color) !important;
 }
 
-  @media only screen and (max-width: 600px) {
-    #cards_landscape_wrap-2 .card-flyer .image-box img{ 
-        width: 261px;
-        height: 300px;
-      }
-  }
+/* ABOUT */
+.about__section img {
+  border-radius: 10px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--white-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 0.5em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--secondary-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--white-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;     
+  /* filter: brightness(50%);  */
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  font-weight: bolder;
+  color: var(--gray-color);
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: var(--gray-color);
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: var(--primary-color);
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
 
 
 
