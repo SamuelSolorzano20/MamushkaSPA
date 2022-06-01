@@ -49,7 +49,26 @@
 <div class="container">
   <h1 class="app__title" style="text-align: center;"><span>N</span>uestro <span>T</span>rabajo </h1>
   <ul class="cards">
-    <li>
+    <li *ngFor = "let item of items | async">
+       <a href="" class="card shadow-lg">
+        <img [src] = "item.urlImage"  class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+              <path />
+            </svg>
+            <img class="card__thumb" src="assets/img/camisa.png" alt="" />
+            <div class="card__header-text">
+              <h3 class="card__title">Camisa</h3>
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            blanditiis?</p>
+        </div>
+      </a>
+    </li>
+   <!--  <li>
       <a href="" class="card shadow-lg">
         <img src="assets/img/prod1.png" class="card__image" alt="" />
         <div class="card__overlay">
@@ -219,7 +238,7 @@
             blanditiis?</p>
         </div>
       </a>
-    </li>
+    </li> -->
   </ul>
 </div>
 

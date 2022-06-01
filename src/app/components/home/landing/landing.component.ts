@@ -11,11 +11,10 @@ import {Place} from '../../models/places'
 export class LandingComponent implements OnInit {
   items: Observable<any[]>;
   constructor(db:AngularFirestore) {
-    this.items = db.collection('places').snapshotChanges();
+    this.items = db.collection('places').valueChanges();
    }
   
   ngOnInit(): void {
 
   }
-
 }
