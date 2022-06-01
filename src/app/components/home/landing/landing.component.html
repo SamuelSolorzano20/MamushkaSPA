@@ -2,13 +2,13 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="4000">
-      <img src="assets/img/carousel4.jpg" class="d-block w-100" alt="...">
+      <img src="assets/img/carousel4.jpg" class="d-block w-100">
     </div>
     <div class="carousel-item" data-bs-interval="4000">
-      <img src="assets/img/carouse2.png" class="d-block w-100" alt="...">
+      <img src="assets/img/carousel2.png" class="d-block w-100">
     </div>
     <div class="carousel-item" data-bs-interval="4000">
-      <img src="assets/img/carouse1.png" class="d-block w-100" alt="">
+      <img src="assets/img/carousel1.png" class="d-block w-100">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -31,14 +31,13 @@
     <div class="col-lg-6">
       <h1 class="app__title"><span>N</span>osotros</h1>
       <p class="app__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio fugit quaerat quos pariatur a voluptatem enim
-        voluptas doloribus officiis labore dolorum nulla, modi recusandae beatae facilis iste impedit.
+        Creaciones Mamushka es un negocio que parte de una idea emprendedora con el fin de
+        brindar el mejor servicio de confección de vestimenta y estilo de ropaje a sus clientes
+        ofreciendoles una amplia gama de variedades y con la nueva modalidad de consultas y pedidos 
+        en línea desde la comodidad de sus hogares.
 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio fugit quaerat quos pariatur a voluptatem enim
-        voluptas doloribus officiis labore dolorum nulla, modi recusandae beatae facilis iste impedit.
-
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio fugit quaerat quos pariatur a voluptatem enim
-        voluptas doloribus officiis labore dolorum nulla, modi recusandae beatae facilis iste impedit.
+        Creemos en el compromiso, la honestidad y la lealtad como componentes claves en el desarrollo, 
+        manteniendo nuestra proyección siempre hacia el futuro facilitanto el vestirse cómodo y a la moda.
       </p>
     </div>
   </div>
@@ -49,9 +48,9 @@
 <div class="container">
   <h1 class="app__title" style="text-align: center;"><span>N</span>uestro <span>T</span>rabajo </h1>
   <ul class="cards">
-    <li *ngFor = "let item of items | async">
-       <a href="" class="card shadow-lg">
-        <img [src] = "item.urlImage"  class="card__image" alt="" />
+    <li *ngFor="let item of items | async">
+      <a href="" class="card shadow-lg">
+        <img [src]="item.urlImage" class="card__image" alt="" />
         <div class="card__overlay">
           <div class="card__header">
             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
@@ -63,182 +62,12 @@
               <span class="card__status">1 hour ago</span>
             </div>
           </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
+          <p class="card__description">
+            {{ item.description }}
+          </p>
         </div>
       </a>
     </li>
-   <!--  <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod1.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/camisa.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Camisa</h3>
-              <span class="card__status">1 hour ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod2.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/camisa.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Camisa</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod3.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/camisa.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Camisa</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod4.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/vestido.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Blusa</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod5.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/vestido.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Blusa</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod6.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/vestido.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Blusa</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod7.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/falda.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Falda</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod8.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/falda.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Falda</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card shadow-lg">
-        <img src="assets/img/prod9.png" class="card__image" alt="" />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/falda.png" alt="" />
-            <div class="card__header-text">
-              <h3 class="card__title">Falda</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li> -->
   </ul>
 </div>
 
@@ -246,103 +75,103 @@
 <!-- WHATSAPP BOT -->
 <div class="elfsight-app-78bc65ae-cf03-4a8d-8e7b-ddcc9230d041"></div>
 
+
 <!-- TESTIMONIAL -->
-<div id="carouselExampleControls" class="carousel slide text-center carousel-dark" style="margin-top: 150px;" data-bs-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide text-center carousel-dark" style="margin-top: 150px;"
+  data-bs-ride="carousel">
   <h1 class="app__title" style="text-align: center; margin-bottom: 50px;"><span>T</span>estimonio</h1>
   <div class="carousel-inner">
-      <div class="carousel-item active">
-          <img class="rounded-circle shadow mb-4" src="assets/img/pic1.png" style="width: 150px;" />
-          <div class="row d-flex justify-content-center">
-              <div class="col-lg-8">
-                  <h5 class="mb-3">María Del Carmen</h5>
-                  <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                      nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
-                      fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
-                      doloremque.
-                  </p>
-              </div>
-          </div>
-          <div class="text-primary">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-          </div>
+    <div class="carousel-item active">
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic1.png" style="width: 150px;" />
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h5 class="mb-3">María Del Carmen</h5>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
+            nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
+            fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
+            doloremque.
+          </p>
+        </div>
       </div>
-      <div class="carousel-item">
-          <img class="rounded-circle shadow mb-4" src="assets/img/pic2.png" style="width: 150px;" />
-          <div class="row d-flex justify-content-center">
-              <div class="col-lg-8">
-                  <h5 class="mb-3">Juan William</h5>
-                  <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                      nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
-                      fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
-                      doloremque.
-                  </p>
-              </div>
-          </div>
-          <div class="text-primary">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-          </div>
+      <div class="text-primary">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
       </div>
-      <div class="carousel-item">
-          <img class="rounded-circle shadow mb-4" src="assets/img/pic3.png" style="width: 150px;" />
-          <div class="row d-flex justify-content-center">
-              <div class="col-lg-8">
-                  <h5 class="mb-3">July Méndez</h5>
-                  <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                      nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
-                      fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
-                      doloremque.
-                  </p>
-              </div>
-          </div>
-          <div class="text-primary">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-          </div>
+    </div>
+    <div class="carousel-item">
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic2.png" style="width: 150px;" />
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h5 class="mb-3">Juan William</h5>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
+            nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
+            fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
+            doloremque.
+          </p>
+        </div>
       </div>
-      <div class="carousel-item">
-          <img class="rounded-circle shadow mb-4" src="assets/img/pic4.png" style="width: 150px;" />
-          <div class="row d-flex justify-content-center">
-              <div class="col-lg-8">
-                  <h5 class="mb-3">Carlos Soza</h5>
-                  <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                      nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
-                      fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
-                      doloremque.
-                  </p>
-              </div>
-          </div>
-          <div class="text-primary">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-          </div>
+      <div class="text-primary">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
       </div>
+    </div>
+    <div class="carousel-item">
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic3.png" style="width: 150px;" />
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h5 class="mb-3">July Méndez</h5>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
+            nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
+            fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
+            doloremque.
+          </p>
+        </div>
+      </div>
+      <div class="text-primary">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic4.png" style="width: 150px;" />
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h5 class="mb-3">Carlos Soza</h5>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
+            nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
+            fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
+            doloremque.
+          </p>
+        </div>
+      </div>
+      <div class="text-primary">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+    </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
   </button>
 </div>
