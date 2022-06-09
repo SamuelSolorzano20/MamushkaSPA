@@ -15,6 +15,6 @@ export class LandingComponent implements OnInit {
    }
   
   ngOnInit(): void {
-
+    this.items.forEach(a => console.log(a));
   }
 }

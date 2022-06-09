@@ -14,6 +14,8 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore"
 
 import { environment } from 'src/environments/environment';
 import { VestidosComponent } from './components/products/vestidos/vestidos.component';
+import { ContactComponent } from './components/home/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,13 @@ import { VestidosComponent } from './components/products/vestidos/vestidos.compo
     NavbarComponent,
     FooterComponent,
     LandingComponent,
-    VestidosComponent
+    VestidosComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
