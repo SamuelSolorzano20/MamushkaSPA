@@ -39,7 +39,16 @@
                             <textarea required formControlName= "Comments" class="form-control" placeholder="Escribe tus dudas..." id="floatingTextarea2" style="height: 100px"></textarea>
                             <label for="floatingTextarea2">Comentarios</label>
                           </div>
-                        <button (click)="Submit()"  type="button" class="btn btn-pink">Solicitar Info</button>
+
+                        <div [hidden]="captcha">
+                            <label for="">Hola, humano potencial...</label>
+                            <re-captcha (resolved)="resolved($event)" siteKey="6LfWc2UgAAAAADLP5yMwKRDKZaUPoD1uao7sIlxp"></re-captcha>
+                        </div>
+
+                        <div [hidden]="!captcha">
+                            <button (click)="Submit()"  type="button" class="btn btn-pink">Enviar</button>
+                        </div>
+                        
                     </div>
                 </div>
             </form>

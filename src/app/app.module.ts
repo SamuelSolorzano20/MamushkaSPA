@@ -17,6 +17,11 @@ import { VestidosComponent } from './components/products/vestidos/vestidos.compo
 import { ContactComponent } from './components/home/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { RecaptchaModule } from 'ng-recaptcha';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +37,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    RecaptchaModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
