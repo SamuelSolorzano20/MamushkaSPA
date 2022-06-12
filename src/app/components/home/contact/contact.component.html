@@ -20,22 +20,24 @@
                     <h3 class="card-title text-center">Contáctanos</h3>
                     <div class="form-floating mb-3 mt-3">
                         <input required formControlName= "Name" pe="text" class="form-control" id="floatingInput" placeholder="Nombre Completo">
+                        <span class="reactiveSpan" *ngIf = "form.value['Name'].invalid && form.value['Name'].touched">El Nombre es Requerido </span>
                         <label for="floatingInput">Nombre Completo</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input required formControlName= "Email" type="email" class="form-control" id="floatingInput" placeholder="algo@email.com">
                         <label for="floatingInput">Correo Electrónico</label>
+                        <span class="reactiveSpan" *ngIf = "form.value['Email'].invalid && form.value['Email'].touched">Formato Inválido</span>
                     </div>
                     <div class="form-floating mb-3">
                         <input required formControlName= "PhoneNumber" type="tel" class="form-control" id="floatingInput" placeholder="Nombre Completo">
-                        <label for="floatingInput">Numero de Teléfono</label>
+                        <label for="floatingInput">Número de Teléfono</label>
+                        <span class="reactiveSpan" *ngIf = "form.value['PhoneNumber'].invalid && form.value['PhoneNumber'].touched">Formato Inválido </span>
                     </div>
 
                     <div class="form-floating mb-3">
                         <textarea required formControlName= "Comments" class="form-control" placeholder="Escribe tus dudas..." id="floatingTextarea2" style="height: 100px"></textarea>
                         <label for="floatingTextarea2">Comentarios</label>
                       </div>
-
                     <button (click)="Submit()"  type="button" class="btn btn-pink">Solicitar Info</button>
                 </div>
             </div>

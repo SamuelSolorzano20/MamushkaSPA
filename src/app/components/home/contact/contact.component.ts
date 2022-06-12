@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,10 +10,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   form:FormGroup = new FormGroup({
-    Name: new FormControl(''),
-    Email:new FormControl(''),
-    PhoneNumber:new FormControl(''),
-    Comments:new FormControl(''),
+    Name: new FormControl('',Validators.required),
+    Email:new FormControl('',Validators.pattern(/([a-zA-Z0-9_.-]+)@gmail([\.])com$/)),
+    PhoneNumber:new FormControl('',Validators.pattern(/[0-9]{4}-[0-9]{4}/)),
+    Comments:new FormControl('Sin comentarios',),
   });
   constructor(private readonly db:AngularFirestore) { }
 
@@ -21,12 +21,13 @@ export class ContactComponent implements OnInit {
   }
   async Submit()
   {
-    if (this.form.value){
+    if (this.form.valid){
         const inserted = await this.db.collection('Contact').add(this.form.value);
         if(inserted){
           this.form.reset();
         }
         else{
+          console.log("Datos incorrectos")
           return;
         }
     }
