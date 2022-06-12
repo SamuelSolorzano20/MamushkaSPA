@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
     Name: new FormControl('',Validators.required),
     Email:new FormControl('',Validators.pattern(/([a-zA-Z0-9_.-]+)@gmail([\.])com$/)),
     PhoneNumber:new FormControl('',Validators.pattern(/[0-9]{4}-[0-9]{4}/)),
-    Comments:new FormControl('Sin comentarios',),
+    Comments:new FormControl('',),
   });
   constructor(private readonly db:AngularFirestore) { }
 

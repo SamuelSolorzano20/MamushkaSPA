@@ -1,5 +1,5 @@
 <!-- CARRUSEL -->
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div id="carouselExampleFade" data-aos="zoom-in" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="4000">
       <img src="./../../../../assets/img/como-ordenar.png" class="d-block w-100">
@@ -38,7 +38,7 @@
 
 
 <!-- ABOUT -->
-<div id="nosotros" class="container col-xxl-8 px-4 py-5">
+<div id="nosotros" data-aos="fade-right" class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="about__section col-10 col-sm-8 col-lg-6">
       <img src="assets/img/image1.png" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy">
@@ -63,7 +63,7 @@
 <div class="container" id="book">
   <h1 class="app__title" style="text-align: center;"><span>N</span>uestro <span>T</span>rabajo </h1>
   <ul class="cards">
-    <li *ngFor="let item of items | async">
+    <li data-aos="flip-left" *ngFor="let item of items | async">
       <a  class="card shadow-lg">
         <img [src]="item.urlImage" class="card__image" alt="" />
         <div class="card__overlay">
