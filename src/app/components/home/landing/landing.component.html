@@ -1,27 +1,27 @@
 <!-- CARRUSEL -->
 <div id="carouselExampleFade" data-aos="zoom-in" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <!-- <div class="carousel-item active" data-bs-interval="4000">
-      <img src="assets/img/como-ordenar.png" class="d-block w-100">
-    </div> -->
     <div class="carousel-item active" data-bs-interval="4000">
-      <img src="assets/img/carousel4.jpg" class="d-block w-100">
+      <img src="https://firebasestorage.googleapis.com/v0/b/trips2-4fcfe.appspot.com/o/carousel-img%2Fcarousel1.jpg?alt=media&token=13c0bf45-8a5d-4ea3-a09b-cd854a6a1f48" 
+      class="d-block w-100" alt="botones e hilos de coser">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
+        <h1>Haz una orden a tu medida!</h1>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="4000">
-      <img src="assets/img/carousel2.png" class="d-block w-100">
+      <img src="https://firebasestorage.googleapis.com/v0/b/trips2-4fcfe.appspot.com/o/carousel-img%2Fcarousel2.png?alt=media&token=0cdb8b10-1471-4d93-bf85-ce7dd4cf78a1" 
+      class="d-block w-100" alt="pesona trabajando con maquina de coser">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
+        <h2>Trabajo de calidad asegurado!</h2>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="4000">
-      <img src="assets/img/carousel1.png" class="d-block w-100">
+      <img src="https://firebasestorage.googleapis.com/v0/b/trips2-4fcfe.appspot.com/o/carousel-img%2Fcarousel3.png?alt=media&token=a88b757f-77e9-43fc-bbe5-45c5717c4cbc" 
+      class="d-block w-100" alt="estantería llena de hilos de coser de muchos colores">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
+        <h2>La mejor variedad de materiales!</h2>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
@@ -41,10 +41,11 @@
 <div id="nosotros" data-aos="fade-right" class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="about__section col-12 col-sm-12 col-lg-6 col-xxl-6">
-      <img src="assets/img/image1.png" class="d-block mx-lg-auto img-fluid" width="700" height="500" loading="lazy">
+      <img src="https://firebasestorage.googleapis.com/v0/b/trips2-4fcfe.appspot.com/o/carousel-img%2Fhero.png?alt=media&token=485924a3-16df-4f7c-900e-f50243cfdae6" 
+      class="d-block mx-lg-auto img-fluid" width="700" height="500" alt="mujer con vestido rosado">
     </div>
     <div class="col-lg-6">
-      <h1 class="app__title"><span>N</span>osotros</h1>
+      <h2 class="app__title"><span>N</span>osotros</h2>
       <p class="app__text">
         Creaciones Mamushka es un negocio que parte de una idea emprendedora con el fin de
         brindar el mejor servicio de confección de vestimenta y estilo de ropaje a sus clientes
@@ -61,19 +62,17 @@
 
 <!-- OUR WORK -->
 <div class="container" id="book">
-  <h1 class="app__title" style="text-align: center;"><span>N</span>uestro <span>T</span>rabajo </h1>
+  <h2 class="app__title" style="text-align: center;"><span>N</span>uestro <span>T</span>rabajo </h2>
   <ul class="cards">
     <li data-aos="flip-left" *ngFor="let item of items | async">
-      <a  class="card shadow-lg">
-        <img [src]="item.urlImage" class="card__image" alt="" />
+      <div  class="card shadow-lg">
+        <img [src]="item.urlImage" class="card__image"  [alt]="item.name"/>
         <div class="card__overlay">
           <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-              <path />
-            </svg>
-            <img class="card__thumb" src="assets/img/camisa.png" alt="" />
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"></svg>
+            <img class="card__thumb" src="assets/img/camisa.png" alt="logo negro de camisa" />
             <div class="card__header-text">
-              <h3 class="card__title">{{item.name}}</h3>
+              <h3 class="card__title">{{ item.name }}</h3>
               <span class="card__status">1 hour ago</span>
             </div>
           </div>
@@ -81,7 +80,7 @@
             {{ item.description }}
           </p>
         </div>
-      </a>
+      </div>
     </li>
   </ul>
 </div>
@@ -94,13 +93,13 @@
 <!-- TESTIMONIAL -->
 <div id="carouselExampleControls" class="carousel slide text-center carousel-dark" style="margin: 150px 0px 50px 0px;"
   data-bs-ride="carousel">
-  <h1 class="app__title" style="text-align: center; margin-bottom: 50px;"><span>T</span>estimonio</h1>
+  <h2 class="app__title" style="text-align: center; margin-bottom: 50px;"><span>T</span>estimonio</h2>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="rounded-circle shadow mb-4" src="assets/img/pic1.png" style="width: 150px;" />
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic1.png" style="width: 150px;" alt="persona del carousel 1" />
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
-          <h5 class="mb-3">María Del Carmen</h5>
+          <h4 class="mb-3">María Del Carmen</h4>
           <p class="text-muted">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
             nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
@@ -118,10 +117,10 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="rounded-circle shadow mb-4" src="assets/img/pic2.png" style="width: 150px;" />
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic2.png" style="width: 150px;" alt="persona del carousel 2" />
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
-          <h5 class="mb-3">Juan William</h5>
+          <h4 class="mb-3">Juan William</h4>
           <p class="text-muted">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
             nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
@@ -139,10 +138,10 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="rounded-circle shadow mb-4" src="assets/img/pic3.png" style="width: 150px;" />
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic3.png" style="width: 150px;" alt="persona del carousel 3" />
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
-          <h5 class="mb-3">July Méndez</h5>
+          <h4 class="mb-3">July Méndez</h4>
           <p class="text-muted">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
             nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia
@@ -160,10 +159,10 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="rounded-circle shadow mb-4" src="assets/img/pic4.png" style="width: 150px;" />
+      <img class="rounded-circle shadow mb-4" src="assets/img/pic4.png" style="width: 150px;" alt="persona del carousel 4" />
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
-          <h5 class="mb-3">Carlos Soza</h5>
+          <h4 class="mb-3">Carlos Soza</h4>
           <p class="text-muted">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
             nesciunt sint eligendi reprehenderit reiciendis, quibusdam illo, beatae quia

@@ -3,8 +3,12 @@ h2 {
 }
 
 h2, p {
-    color: var(--white-color);
+    color: var(--gray-color);
     font-weight: bold;
+}
+
+.carousel-caption h2, p {
+  color: var(--white-color);
 }
 
 .btn-primary {
