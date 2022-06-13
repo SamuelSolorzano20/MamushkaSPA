@@ -21,6 +21,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { OrderComponent } from './components/home/order/order.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     FooterComponent,
     LandingComponent,
     VestidosComponent,
-    ContactComponent
+    ContactComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
